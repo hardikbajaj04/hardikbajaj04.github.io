@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(136,231,251);
+}
+
+.hero{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
+
+.calc-body {
+    background-color: black;
+    padding: 20px 50px;
+    border-radius: 30px;
+}
+
+.display {
+    height: 60px;
+    margin: 15px 0;
+    width: 100%;
+    font-size: 30px;
+
+}
+
+.btn-primary {
+    height: 60px;
+    width: 60px;
+    color: black;
+    background-color: rgb(195,195,195);
+    font-size: 24px;
+}
+.btn-primary:hover{
+    background-color: rgb(195,195,195);
+    color: black !important;
+}
+
+.row {
+    margin: 10px 0;
+}
+.btn-danger{
+    font-size: 24px;    
+    height: 50px;
+    margin-top: 15px;
+}
+
