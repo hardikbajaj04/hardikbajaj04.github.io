@@ -20,6 +20,7 @@
             <button onclick="calculateAge()" style="margin-top: 20px;" class="btn btn-primary"> Find my age!
             </button>
             <h2 style="margin-top: 20px;">Your age is: <span id="age"></span> </h2>
+            <h2 style="margin-top: 20px;">Your age is: <span id="age2"></span> </h2>
 
         </form>
         <!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -69,6 +70,7 @@
         }
         function calculateAge() {
             event.preventDefault()
+            calculageAgeDayjs();
             let dob = new Date(ageCalc.dob.value);
 
             var d1 = dob.getDate();
@@ -101,9 +103,12 @@
     <script>
         function calculageAgeDayjs() {
             event.preventDefault()
-            dayjs.extend(window.dayjs_plugin_utc.relativeTime)
             let dob = new Date(ageCalc.dob.value);
-            console.log(dayjs(dob).fromNow())
+            const y = dayjs().diff(dayjs(dob), 'year')
+            const m = dayjs().diff(dayjs(dob), 'month')
+            const d = dayjs().diff(dayjs(dob), 'day')
+            document.getElementById("age2").innerHTML =
+                y + " Years " + m + " Months " + d + " Days";
         }
     </script>
 </body>
